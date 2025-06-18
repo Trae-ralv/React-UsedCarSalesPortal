@@ -1,0 +1,94 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "brand": "Ford",
+      "model": "Thunderbird",
+      "year": 1984,
+      "price": 49.99,
+      "description": "Classic Ford Thunderbird with a sleek design and powerful V8 engine, perfect for cruising.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/1984_Ford_Thunderbird%3B_Annandale%2C_MN_%2842362510175%29.jpg/330px-1984_Ford_Thunderbird%3B_Annandale%2C_MN_%2842362510175%29.jpg"
+    },
+    {
+      "id": 2,
+      "brand": "Chevrolet",
+      "model": "Corvette",
+      "year": 1965,
+      "price": 3.29,
+      "description": "Iconic 1965 Chevrolet Corvette, featuring a bold look and high-performance capabilities.",
+      "imageUrl": "https://cdn.dealeraccelerate.com/cam/34/3481/199068/1920x1440/1965-chevrolet-corvette-coupe"
+    },
+    {
+      "id": 3,
+      "brand": "GMC",
+      "model": "Sierra 2500",
+      "year": 2007,
+      "price": 8.99,
+      "description": "Rugged GMC Sierra 2500, built for heavy-duty tasks with a spacious cabin and strong towing capacity.",
+      "imageUrl": "https://www.edmunds.com/assets/m/gmc/sierra-1500hd-classic/2007/oem/2007_gmc_sierra-1500hd-classic_crew-cab-pickup_slt_fq_oem_1_500.jpg"
+    },
+    {
+      "id": 4,
+      "brand": "Hyundai",
+      "model": "Accent",
+      "year": 1996,
+      "price": 39.99,
+      "description": "Reliable Hyundai Accent, offering compact efficiency and comfortable city driving.",
+      "imageUrl": "https://www.edmunds.com/assets/m/hyundai/accent/1996/oem/1996_hyundai_accent_2dr-hatchback_gt_fq_oem_1_500.jpg"
+    },
+    {
+      "id": 5,
+      "brand": "Mercury",
+      "model": "Cougar",
+      "year": 2002,
+      "price": 3.99,
+      "description": "Sleek Mercury Cougar with sporty styling and a smooth ride, ideal for daily commutes.",
+      "imageUrl": "https://s1.cdn.autoevolution.com/images/gallery/MERCURYCougar-3412_1.jpg"
+    },
+    {
+      "id": 6,
+      "brand": "Hummer",
+      "model": "H2",
+      "year": 2005,
+      "price": 15.99,
+      "description": "Bold Hummer H2, designed for off-road adventures with a commanding presence and robust build.",
+      "imageUrl": "https://platform.cstatic-images.com/xxlarge/in/v2/stock_photos/6694a87e-08f5-41a8-b07f-61cb5f556c50/a9ea5dde-a526-483c-8075-bb9cbcd76d91.png"
+    },
+    {
+      "id": 7,
+      "brand": "Hummer",
+      "model": "H3",
+      "year": 2007,
+      "price": 4.99,
+      "description": "Versatile Hummer H3, combining off-road capability with a more compact, urban-friendly design.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/2007_Hummer_H3_--_NHTSA.jpg/500px-2007_Hummer_H3_--_NHTSA.jpg"
+    },
+    {
+      "id": 8,
+      "brand": "Land Rover",
+      "model": "Range Rover",
+      "year": 1989,
+      "price": 19.99,
+      "description": "Luxurious 1989 Range Rover, offering premium comfort and legendary off-road performance.",
+      "imageUrl": "https://www.pcarmarket.com/static/media/uploads/galleries/photos/uploads/galleries/31969-jean-land-rover/.thumbnails/3A24582C-9294-4620-B502-C77F1B67768C.webp/3A24582C-9294-4620-B502-C77F1B67768C-tiny-1200x0.webp"
+    },
+    {
+      "id": 9,
+      "brand": "Nissan",
+      "model": "Quest",
+      "year": 2011,
+      "price": 14.99,
+      "description": "Family-friendly Nissan Quest, featuring a spacious interior and smooth handling for long trips.",
+      "imageUrl": "https://www.iihs.org/cdn-cgi/image/width=636/api/ratings/model-year-images/1852/"
+    },
+    {
+      "id": 10,
+      "brand": "Ford",
+      "model": "Crown Victoria",
+      "year": 2000,
+      "price": 89.99,
+      "description": "Dependable Ford Crown Victoria, known for its durability and comfortable ride, ideal for long drives.",
+      "imageUrl": "https://file.kelleybluebookimages.com/kbb/base/house/2000/2000-Ford-Crown%20Victoria-FrontSide_FOVIC001_505x375.jpg"
+    }
+  ]
+}

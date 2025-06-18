@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import CarListing from './components/CarListing';
+import Login from './components/Login';
+import Layout from './components/Layout';
+import AuthNav from './components/AuthNav';
+import Home from './components/Home';
+import { Routes, Route } from 'react-router-dom';
+import Register from './components/Register';
 
 function App() {
+  const [isAuth, setIsAuth] = useState(() => {
+    return localStorage.getItem('isAuth') === 'true';
+  });
+
+  useEffect(() => {
+    localStorage.setItem('isAuth', isAuth);
+  }, [isAuth]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route element={<Layout isAuth={isAuth} setIsAuth={setIsAuth} />}>
+        <Route path='/login' element={<Login setIsAuth={setIsAuth} />} />
+        <Route path='/register' element={<Register />} />
+        <Route path="/carlist" element={<AuthNav isAuth={isAuth}><CarListing /></AuthNav>} />
+        <Route path="/" element={<Home />} />
+      </Route>
+    </Routes>
   );
 }
 

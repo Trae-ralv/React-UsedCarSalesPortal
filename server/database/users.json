@@ -1,0 +1,74 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "username": "user",
+            "password": "admin123",
+            "email": "admin@example.com",
+            "createdAt": "2025-06-17 04:14:34"
+        },
+        {
+            "id": 2,
+            "username": "vambridge1",
+            "password": "bD7|',X1_x=",
+            "email": "jmarsh1@eventbrite.com",
+            "createdAt": "2024-06-21 04:09:25"
+        },
+        {
+            "id": 3,
+            "username": "nlowson2",
+            "password": "wH0%,a4AUAJIY,F",
+            "email": "npochon2@dagondesign.com",
+            "createdAt": "2025-12-17 04:09:25"
+        },
+        {
+            "id": 4,
+            "username": "rmckellen3",
+            "password": "bO9~Hn1q",
+            "email": "kdutchburn3@issuu.com",
+            "createdAt": "2025-06-17 04:09:25"
+        },
+        {
+            "id": 5,
+            "username": "jdyter4",
+            "password": "rG2+(K,S+y,<j",
+            "email": "bbutterfint4@liveinternet.ru",
+            "createdAt": "2025-06-17 04:09:25"
+        },
+        {
+            "id": 6,
+            "username": "kexroll5",
+            "password": "xP1.dC$aJ.n",
+            "email": "kridehalgh5@trellian.com",
+            "createdAt": "2025-06-17 04:09:25"
+        },
+        {
+            "id": 7,
+            "username": "tseson6",
+            "password": "hG7\"#/gYB01m5l",
+            "email": "jfostersmith6@hud.gov",
+            "createdAt": "2025-06-17 04:09:25"
+        },
+        {
+            "id": 8,
+            "username": "aickovicz7",
+            "password": "gR1.MsdpC.ZF`J\"",
+            "email": "bbarson7@vinaora.com",
+            "createdAt": "2025-06-17 04:09:25"
+        },
+        {
+            "id": 9,
+            "username": "esyme8",
+            "password": "sZ0%)@(0}C",
+            "email": "dcourtin8@huffingtonpost.com",
+            "createdAt": "2025-06-17 04:09:25"
+        },
+        {
+            "id": 10,
+            "username": "ccooksley9",
+            "password": "pX5,7Qg1O",
+            "email": "nogilvie9@tiny.cc",
+            "createdAt": "2025-06-17 04:09:25"
+        }
+    ]
+}

@@ -39,6 +39,35 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+### `npm list`
+Ensure to npm install these dependencies
++-- @fortawesome/fontawesome-svg-core@6.7.2
++-- @fortawesome/free-brands-svg-icons@6.7.2
++-- @fortawesome/free-regular-svg-icons@6.7.2
++-- @fortawesome/free-solid-svg-icons@6.7.2
++-- @fortawesome/react-fontawesome@0.2.2
++-- @testing-library/dom@10.4.0
++-- @testing-library/jest-dom@6.6.3
++-- @testing-library/react@16.3.0
++-- @testing-library/user-event@13.5.0
++-- @types/react-dom@19.1.6
++-- @types/react@19.1.8
++-- @vitejs/plugin-react@4.5.2
++-- axios@1.9.0
++-- bootstrap@5.3.6
++-- concurrently@9.1.2
++-- cors@2.8.5
++-- express@5.1.0
++-- jquery@3.7.1
++-- nodemon@3.1.10
++-- react-bootstrap@2.10.10
++-- react-dom@19.1.0
++-- react-router-dom@7.6.2
++-- react-scripts@5.0.1
++-- react@19.1.0
++-- vite@6.3.5
+`-- web-vitals@2.1.4
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
