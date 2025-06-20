@@ -59,6 +59,9 @@ npm install @fortawesome/fontawesome-svg-core@6.7.2 @fortawesome/free-brands-svg
 Environment File (.env)
 ```
 REACT_APP_API_URL=http://localhost:(ur port)
+REACT_APP_GOOGLE_AUTH_CLIENT_ID=(ur Google Client ID)
+REACT_APP_GOOGLE_AUTH_CLIENT_SECRET=(ur Google Secret)
+REACT_APP_FACEBOOK_APP_ID=(ur Facebook App ID)
 ```
 
 ### `npm test`
