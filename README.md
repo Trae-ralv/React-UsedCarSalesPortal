@@ -1,4 +1,8 @@
-# Updates
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Updates
 Added Google and Facebook API Login Integration with Google OAuth
 
 ## Available Scripts
