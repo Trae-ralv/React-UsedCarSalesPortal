@@ -33,6 +33,7 @@ function Header({ isAuth, setIsAuth }) {
                     <ul className="navbar-nav ms-auto align-items-center">
                         {isAuth ? (
                             <>
+                                {/* Home */}
                                 <li className="nav-item px-4">
                                     <Link
                                         to="/"
@@ -42,6 +43,7 @@ function Header({ isAuth, setIsAuth }) {
                                         <span className="small mt-1">Home</span>
                                     </Link>
                                 </li>
+                                {/* Car Listing */}
                                 <li className="nav-item px-4">
                                     <Link
                                         to="/carlist"
@@ -51,6 +53,7 @@ function Header({ isAuth, setIsAuth }) {
                                         <span className="small mt-1">Car Listing</span>
                                     </Link>
                                 </li>
+                                {/* Logout */}
                                 <li className="nav-item ps-4 pe-5">
                                     <button
                                         onClick={handleLogout}
@@ -63,6 +66,7 @@ function Header({ isAuth, setIsAuth }) {
                             </>
                         ) : (
                             <>
+                                {/* Home */}
                                 <li className="nav-item px-4">
                                     <Link
                                         to="/"
@@ -72,6 +76,7 @@ function Header({ isAuth, setIsAuth }) {
                                         <span className="small mt-1">Home</span>
                                     </Link>
                                 </li>
+                                {/* Login */}
                                 <li className="nav-item px-4">
                                     <Link
                                         to="/login"
@@ -81,7 +86,7 @@ function Header({ isAuth, setIsAuth }) {
                                         <span className="small mt-1">Login</span>
                                     </Link>
                                 </li>
-
+                                {/* Register */}
                                 <li className="nav-item ps-4 pe-5">
                                     <Link
                                         to="/register"

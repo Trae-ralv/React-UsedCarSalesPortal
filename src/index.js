@@ -12,18 +12,19 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 
+import { GoogleOAuthProvider } from '@react-oauth/google';
+
 library.add(fas, far, fab);
 
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(
-//   <React.StrictMode>
-//     <Sample />
-//   </React.StrictMode>
-// );
+const googleclientId = process.env.REACT_APP_GOOGLE_AUTH_CLIENT_ID;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  React.createElement(BrowserRouter, null, React.createElement(App))
+  <GoogleOAuthProvider clientId={googleclientId}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </GoogleOAuthProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

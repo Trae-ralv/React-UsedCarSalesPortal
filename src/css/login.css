@@ -134,3 +134,14 @@ input[data-autocompleted] {
     /* IE 10 and IE 11 */
     user-select: none;
 }
+
+.facebook-button{
+    background-color: #1877f2 !important;
+    width: fit-content;
+    padding: 0.8rem 1rem !important;
+    font-size: 1.2rem !important;
+}
+
+.facebook-button:hover{
+    background-color: #176dde !important;
+}

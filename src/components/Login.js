@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
+import { GoogleLogin } from '@react-oauth/google';
+import { jwtDecode } from 'jwt-decode';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '../css/login.css';
 
 function Login({ setIsAuth }) {
@@ -11,34 +14,31 @@ function Login({ setIsAuth }) {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
-    // Using Service to Data Fetching from API
-    // const handleLogin = async (e) => {
-    //     e.preventDefault(); //prevent default autofill
-    //     setError('');
+    useEffect(() => {
+        // Load Facebook SDK
+        window.fbAsyncInit = function () {
+            window.FB.init({
+                appId: process.env.REACT_APP_FACEBOOK_APP_ID,
+                cookie: true,
+                xfbml: true,
+                version: 'v19.0'
+            });
+        };
+        
 
-    //     try {
-    //         // Fetch users.json from raw GitHub URL
-    //         const response = await axios.get(
-    //             'https://raw.githubusercontent.com/Trae-ralv/MockDatabase/main/users.json'
-    //         );
-    //         const users = response.data;
+        // Check if Facebook JSSDK is found
+        if (!document.getElementById('facebook-jssdk')) {
+            // create <script>
+            const script = document.createElement('script');
+            // assign <script> value
+            script.id = 'facebook-jssdk';
+            script.src = 'https://connect.facebook.net/en_US/sdk.js';
 
-    //         // Validate credentials against fetched users
-    //         const user = users.find(
-    //             (u) => u.username === username && u.password === password
-    //         );
+            //assign to in the <head>
+            document.head.appendChild(script);
+        }
+    }, []);// run only once
 
-    //         if (user) {
-    //             setIsAuth(true);
-    //             navigate('/carlist', { replace: true });
-    //         } else {
-    //             setError('Invalid username or password');
-    //         }
-    //     } catch (error) {
-    //         setError('Failed to fetch user data. Please try again.');
-    //         console.error('Error fetching users:', error);
-    //     }
-    // };
 
     const handleLogin = async (e) => {
         // Using Express to handle CRUD
@@ -66,6 +66,49 @@ function Login({ setIsAuth }) {
     const toggleShowPassword = () => {
         setShowPassword((prev) => !prev);
     };
+
+    // Handler for successful Google login
+    const handleGoogleLoginSuccess = async (credentialResponse) => {
+        try {
+            const decoded = jwtDecode(credentialResponse.credential);
+            console.log('Google user:', decoded);
+
+            setIsAuth(true);
+            navigate('/carlist', { replace: true });
+        } catch (error) {
+            setError('Google login failed');
+            console.error('Google login error:', error);
+        }
+    };
+
+    // Handler for failed Google login
+    const handleGoogleLoginError = () => {
+        setError('Google login was unsuccessful. Please try again.');
+    };
+
+    const handleFacebookLogin = () => {
+        // Check if SDK Loaded
+        if (!window.FB) {
+            setError('Facebook SDK not loaded. Please try again.');
+            return;
+        }
+        window.FB.login(
+            function (response) {
+                if (response.authResponse) {
+                    //Get Fields from profile
+                    window.FB.api('/me', { fields: 'name,email,picture' }, function (profile) {
+                        console.log("Facebook:", profile)
+                        setIsAuth(true);
+                        navigate('/carlist', { replace: true });
+                    });
+                } else {
+                    setError('Facebook login was unsuccessful. Please try again.');
+                }
+            },
+            { scope: 'email,public_profile' }
+        );
+    };
+
 
     return (
         <div className="body-container prevent-select">
@@ -122,7 +165,7 @@ function Login({ setIsAuth }) {
                                 </label>
                             </div>
                         </div>
-                        {/* Register Navigation */}
+                        {/* Register Link */}
                         <div className="d-flex justify-content-between align-items-center">
                             <p>
                                 Don't have an account?
@@ -130,15 +173,36 @@ function Login({ setIsAuth }) {
                                     Register
                                 </Link>
                             </p>
+                        </div>
+                        <div className='text-center'>
                             <button
                                 type="submit"
-                                className="btn btn-primary"
+                                className="btn btn-primary fw-bold w-50 py-2"
                                 disabled={loading}
                             >
                                 {loading ? 'Logging in...' : 'Login'}
                             </button>
                         </div>
                     </form>
+                    <div className="text-center my-3">
+                        <div>or</div>
+                        <div className="d-flex justify-content-center mt-2">
+                            <GoogleLogin
+                                onSuccess={handleGoogleLoginSuccess}
+                                onError={handleGoogleLoginError}
+                                useOneTap
+                            />
+                        </div>
+                        <div className="d-flex justify-content-center mt-2">
+                            <button
+                                type="button"
+                                className="btn btn-primary facebook-button"
+                                onClick={handleFacebookLogin}
+                            >
+                                <FontAwesomeIcon icon="fa-brands fa-square-facebook" /> Log in with Facebook
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="sub-container">
@@ -149,3 +213,4 @@ function Login({ setIsAuth }) {
 }
 
 export default Login;
+

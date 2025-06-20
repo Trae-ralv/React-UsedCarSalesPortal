@@ -337,7 +337,7 @@ const CarListing = () => {
         </div>
       </div>
 
-      {/* Sidebar with filters */}
+      {/* Update/Post Car Overlay Modal */}
       <Modal show={showModal} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>{selectedCar ? 'Edit Car' : 'Add New Car'}</Modal.Title>
