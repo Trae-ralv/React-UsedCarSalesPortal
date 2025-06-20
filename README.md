@@ -1,6 +1,5 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Updates
+Added Google and Facebook API Login Integration with Google OAuth
 
 ## Available Scripts
 
@@ -13,6 +12,16 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+### `npm list`
+Ensure to npm install these dependencies
+```
+npm install @fortawesome/fontawesome-svg-core@6.7.2 @fortawesome/free-brands-svg-icons@6.7.2 @fortawesome/free-regular-svg-icons@6.7.2 @fortawesome/free-solid-svg-icons@6.7.2 @fortawesome/react-fontawesome@0.2.2 @react-oauth/google@0.12.2 @testing-library/dom@10.4.0 @testing-library/jest-dom@6.6.3 @testing-library/react@16.3.0 @testing-library/user-event@13.5.0 @types/react-dom@19.1.6 @types/react@19.1.8 @vitejs/plugin-react@4.5.2 axios@1.9.0 bootstrap@5.3.6 concurrently@9.1.2 cors@2.8.5 express@5.1.0 google-auth-library@10.1.0 install@0.13.0 jquery@3.7.1 jwt-decode@4.0.0 nodemon@3.1.10 npm@11.4.2 react-bootstrap@2.10.10 react-dom@19.1.0 react-router-dom@7.6.2 react-scripts@5.0.1 react@19.1.0 vite@6.3.5 web-vitals@2.1.4
+```
+Environment File (.env)
+```
+REACT_APP_API_URL=http://localhost:(ur port)
+```
 
 ### `npm test`
 
